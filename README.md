@@ -1,27 +1,36 @@
-# AngularCourse
+# AngularCourse Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+## Module in angular
 
-## Development server
+Module là 1 class dùng để đóng gói 1 chức năng cụ thể của ứng dụng.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Có nhiều loại module ví dụ như:
+BrowserModule: được sử dụng ở trên chứa tất cả các dependencies(Các gói thư viện thì node_module sử dụng cho ứng dụng) cần thiết để chạy angular trên trình duyệt.
 
-## Code scaffolding
+Nếu xét về mối quan hệ giữa module và component thì module giống như 1 group của component quản lý các component. 1 module có thể quản lý nhiều component và mỗi component phải được quản lý bởi 1 module nào đó
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+app.module là nơi bắt đầu khởi chạy của ứng dụng. Nó gọi là module gốc và nó chứa 1 component gốc là app.component
 
-## Build
+cú pháp tạo module:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```sh
+ng g module [module name]
+```
 
-## Running unit tests
+## Component in angular
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Component biểu diễn 1 phần UI của website(file.html)
 
-## Running end-to-end tests
+Nói 1 cách đơn giản 1 component là 1 thẻ html do mình tự định nghĩa, trong thẻ đó chứa nội dung html do mình biên soạn
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1 component bao gồm:
+Giao diện html
+CSS của giao diện html đó
+Selector(tên thẻ component do ta tự đặt)
+Ngoài ra chứa 1 class javascript để xứ lý cho component đó và được export ra ngoài
 
-## Further help
+Cú pháp tạo component:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```sh
+ng g component [component name]
+```
